@@ -1,0 +1,193 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+.limelight-regular {
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  max-width: 100%;
+  overflow: hidden; 
+  background-color: #ffffff;
+  font-family: "Limelight", sans-serif;
+}
+
+.App {
+  width: 100%;
+  height: 100vh; 
+  overflow-y: scroll; 
+  overflow-x: hidden;
+  display: block; 
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.Hero,
+.NewGrid,
+.PricingCard,
+.AdBlank,
+.ArtTechNav {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.Hero {
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.NewGrid {
+  display: grid;
+}
+
+.App::-webkit-scrollbar {
+  width: 10px;
+}
+
+.App::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.App::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.App::-webkit-scrollbar-thumb:hover {
+  background: #6f6f6f;
+}
+
+.App::-webkit-scrollbar-button {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .App { overflow-x: hidden; }
+} */
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT */
+html,
+body {
+    background: #F1F1F1;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* 🚀 Prevent horizontal scroll */
+  font-family: "Limelight", sans-serif;
+    /* background: #F1F1F1; */
+}
+
+/* MAIN APP */
+.App {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; /* 🚀 Extra safety */
+}
+
+/* BLOCK GRID CONTAINER */
+.app-blocks-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden; /* 🚀 Prevent spill */
+}
+
+
+.app-blocks-grid {
+  display: grid;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.app-block {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(198, 183, 183, 0);
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* HIGHLIGHT */
+.app-highlight {
+  border: 2px solid white;
+  background: rgb(24, 117, 255);
+}
+
+/* FULL SCREEN SECTIONS */
+.Hero,
+.NewGrid,
+.PricingCard,
+.AdBlank,
+.ArtTechNav,
+.Project,
+.junni-landing-page {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* 🚀 stop child overflow */
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #000000, #444);
+  border-radius: 999px;
+  opacity: 0.8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #888, #555);
+  opacity: 1;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

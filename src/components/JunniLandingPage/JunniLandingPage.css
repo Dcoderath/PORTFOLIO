@@ -1,0 +1,130 @@
+.junni-landing-page {
+  position: relative; /* REQUIRED to keep the button inside */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.junni-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.junni-nav-link {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 28px;
+  pointer-events: all;
+}
+
+/* THE BUTTON: Stays at the bottom of THIS component only */
+.junni-flip-button-container {
+  position: absolute; 
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  pointer-events: none;
+}
+
+.junni-flip-button {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #000;
+  border-radius: 0.1em;
+  padding: 0.65em 1em 0.25em 1em;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 24px;
+  pointer-events: all;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+
+.junni-board {
+  width: 100%;
+  height: 100%;
+  padding: 0.25em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  perspective: 1000px;
+  z-index: 1;
+}
+
+.junni-row {
+  flex: 1;
+  display: flex;
+  gap: 0.15em;
+}
+
+.junni-tile {
+  flex: 1;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.junni-tile-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.1em;
+}
+
+.junni-tile-front::before,
+.junni-tile-back::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: 600% 600%;
+  background-position: inherit;
+}
+
+.junni-tile-front::before {
+  background-image: url("../../assets/front.jpg");
+}
+
+.junni-tile-back::before {
+  background-image: url("../../assets/back.jpg");
+}
+
+.junni-tile-back {
+  transform: rotateX(180deg);
+}
+
+.junni-blocks-container {
+  position: absolute; /* Stay relative to component */
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.junni-blocks-grid {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.junni-block {
+  width: 50px;
+  height: 50px;
+  border: 0.5px solid transparent;
+}
+
+.junni-highlight {
+  border-color: #fff;
+}

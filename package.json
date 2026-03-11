@@ -1,0 +1,50 @@
+{
+  "name": "dcoderath",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "homepage": "https://dcoderath.github.io/D-26",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.0.0",
+    "@formspree/react": "^3.0.0",
+    "@react-three/drei": "^10.0.7",
+    "@react-three/fiber": "^9.1.2",
+    "@studio-freight/lenis": "^1.0.42",
+    "curtainsjs": "^8.1.6",
+    "gsap": "^3.14.2",
+    "imagesloaded": "^5.0.0",
+    "locomotive-scroll": "^4.1.4",
+    "lucide-react": "^0.548.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.6.3",
+    "split-type": "^0.3.4",
+    "three": "^0.176.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.7.0",
+    "clsx": "^2.1.1",
+    "eslint": "^10.0.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "framer-motion": "^12.23.9",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.0.0",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.11",
+    "vite": "^6.3.5",
+    "vite-plugin-gh-pages": "^1.0.1"
+  }
+}
